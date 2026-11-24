@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahmoud Sayed – Computer Science & AI student</title>
+<meta name="description" content="Portfolio of Mahmoud Sayed, Computer Science and AI student at Capital University, looking for a software engineering internship.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Hanken+Grotesk:wght@400;600&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F4F9;--sf:#fff;--tx:#101828;--mu:#4A5468;--am:#B35F0A;--bl:#2F5FD0;--ln:rgba(16,24,40,.14);--gl:rgba(179,95,10,.13);--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1322;--sf:#151D31;--tx:#ECE8DF;--mu:#A3AEC4;--am:#F5A455;--bl:#7BA3FF;--ln:rgba(236,232,223,.15);--gl:rgba(245,164,85,.15);--on:#0D1322;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D1322;--sf:#151D31;--tx:#ECE8DF;--mu:#A3AEC4;--am:#F5A455;--bl:#7BA3FF;--ln:rgba(236,232,223,.15);--gl:rgba(245,164,85,.15);--on:#0D1322;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1.05rem/1.65 "Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:"Bricolage Grotesque","Hanken Grotesk",system-ui,sans-serif;margin:0;line-height:1.05;letter-spacing:-.025em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--am);outline-offset:3px;border-radius:6px}
+.spot{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(560px circle at var(--mx,72%) var(--my,22%),var(--gl),transparent 70%)}
+main,header,footer{position:relative;z-index:1}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+header .wrap{display:flex;align-items:center;gap:1.5rem;height:60px}
+.logo{font:800 1.15rem "Bricolage Grotesque",system-ui,sans-serif;text-decoration:none;margin-inline-end:auto;letter-spacing:-.02em}
+nav{display:flex;gap:1.4rem}
+nav a{text-decoration:none;color:var(--mu);font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--tx);color:var(--tx);background:none;font-family:inherit;font-size:1rem;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.fill{background:var(--am);border-color:var(--am);color:var(--on)}
+.btn.sm{padding:.45rem 1rem;font-size:.9rem}
+#theme{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ln);background:none;color:var(--tx);cursor:pointer;display:grid;place-items:center}
+#theme:hover{border-color:var(--am)}
+.hero{min-height:calc(100svh - 60px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:2rem;padding-block:3rem}
+h1{font-size:clamp(3rem,9.2vw,7.2rem);font-weight:800;letter-spacing:-.04em}
+h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .c{display:inline-block;animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*45ms + 150ms)}
+@keyframes rise{from{transform:translateY(110%)}to{transform:none}}
+.lead{max-width:34ch;font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.45;margin:1.6rem 0 1.2rem}
+.motto{color:var(--am);font:700 1rem "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.stage{--size:min(86vw,440px);width:var(--size);aspect-ratio:1;position:relative;margin-inline:auto}
+.halo{position:absolute;inset:16%;border-radius:50%;background:conic-gradient(var(--am),var(--bl),var(--am));animation:spin 14s linear infinite;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 4px),#000 calc(100% - 3px))}
+.ph{position:absolute;inset:19.5%;border-radius:50%;overflow:hidden;background:var(--sf);box-shadow:0 20px 60px -20px var(--am);animation:pop 1s .2s cubic-bezier(.2,.8,.2,1) both}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+@keyframes pop{from{transform:scale(.7);opacity:0}to{transform:none;opacity:1}}
+.orbit{position:absolute;inset:0}
+.slot{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateX(calc(var(--size)*.44))}
+.chip{position:absolute;left:0;top:0;translate:-50% -50%;white-space:nowrap;transform:rotate(calc(-1*var(--a)))}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes un{from{transform:rotate(calc(-1*var(--a)))}to{transform:rotate(calc(-1*var(--a) - 360deg))}}
+.tag{display:inline-block;padding:.3rem .8rem;border:1px solid var(--ln);border-radius:999px;background:var(--sf);font-weight:600;font-size:.88rem;line-height:1.4}
+.orbit .tag{box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
+.sec{border-top:1px solid var(--ln);padding-block:clamp(3.5rem,8vw,6.5rem)}
+.sec>.wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:2rem 4rem}
+h2{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:700}
+.sec p{margin:0 0 1rem;max-width:62ch}
+.mu{color:var(--mu)}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:.7rem 1.6rem;margin:1.8rem 0 0}
+dt{color:var(--mu)}dd{margin:0;font-weight:600}
+.rows>div{display:grid;grid-template-columns:minmax(0,10rem) 1fr;gap:.6rem 1.5rem;padding:1.1rem 0;border-top:1px solid var(--ln);align-items:start}
+.rows>div:last-child{border-bottom:1px solid var(--ln)}
+.rows h3{font-size:1.1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.lab{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.5rem;align-items:stretch}
+.lab form{display:flex;flex-direction:column;gap:1rem;justify-content:center}
+.lab input{font:inherit;padding:.8rem 1rem;border-radius:12px;border:1.5px solid var(--ln);background:var(--sf);color:var(--tx);width:100%}
+.lab input:focus-visible{border-color:var(--am);outline-offset:1px}
+.lab .cta{gap:.6rem}
+#msg{min-height:3.2em;font-size:.95rem;color:var(--mu);margin:0}
+#stack{border:1.5px solid var(--ln);border-top:none;border-radius:0 0 16px 16px;min-height:340px;padding:12px;display:flex;flex-direction:column-reverse;gap:8px;background:var(--sf);position:relative}
+#stack .it{padding:.65rem 1rem;border-radius:10px;background:var(--bl);color:var(--on);font-weight:700;display:flex;justify-content:space-between;animation:drop .45s cubic-bezier(.3,1.4,.5,1) both}
+#stack .it.top{background:var(--am)}
+#stack .it.out{animation:out .28s ease-in forwards}
+#stack .it small{font-weight:600;opacity:.8}
+#stack .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--mu);padding:1rem;font-size:.95rem}
+@keyframes drop{from{transform:translateY(-160px);opacity:0}to{transform:none;opacity:1}}
+@keyframes out{to{transform:translateY(-120px);opacity:0}}
+.tl>div{padding:0 0 1.6rem 1.4rem;border-left:2px solid var(--ln);position:relative}
+.tl>div::before{content:"";position:absolute;left:-7px;top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--am)}
+.tl h3{font-size:1.2rem;margin-bottom:.3rem}
+.tl p{margin:0;color:var(--mu)}
+.bar{height:8px;border-radius:99px;background:var(--ln);overflow:hidden;margin:.5rem 0 1.4rem}
+.bar i{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--am),var(--bl));transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+.bar.on i{width:var(--w)}
+.lg{display:flex;justify-content:space-between;font-weight:600}
+.big{display:block;font:800 clamp(1.5rem,5.4vw,3.4rem)/1.1 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.03em;text-decoration:none;word-break:break-word;margin-bottom:1.6rem}
+.big:hover{color:var(--am)}
+.cl{display:flex;flex-wrap:wrap;gap:.8rem 2rem}
+.cl a{font-weight:600}
+footer{border-top:1px solid var(--ln);padding:1.8rem 0;color:var(--mu);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+@media(max-width:860px){
+.hero{grid-template-columns:1fr;padding-block:2rem 3rem;text-align:start}
+.stage{order:-1;--size:min(78vw,380px)}
+.sec>.wrap{grid-template-columns:1fr;gap:1.4rem}
+
+.lab{grid-template-columns:1fr}
+.rows>div{grid-template-columns:1fr}
+}
+@media(max-width:420px){dl{grid-template-columns:1fr;gap:.1rem}dd{margin-bottom:.7rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.bar i{width:var(--w)}}
+
+nav a.on{color:var(--am)}
+#lang{height:40px;padding:0 .95rem;border-radius:999px;border:1.5px solid var(--ln);background:none;color:var(--tx);font:600 .92rem "Cairo","Hanken Grotesk",system-ui,sans-serif;cursor:pointer}
+#lang:hover,#menu:hover{border-color:var(--am)}
+#menu{display:none;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ln);background:none;color:var(--tx);cursor:pointer;place-items:center}
+.sk{font-family:inherit;color:var(--tx);cursor:pointer;transition:transform .2s,border-color .2s,color .2s,background .2s}
+.rows .sk{padding:.42rem 1rem;font-size:.93rem}
+.sk:hover{border-color:var(--am);color:var(--am);transform:translateY(-2px)}
+.mdl{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:1.2rem;background:rgba(8,12,24,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.mdl[hidden]{display:none}
+.mbox{position:relative;width:min(460px,100%);max-height:90svh;overflow:auto;background:var(--sf);border:1px solid var(--ln);border-radius:24px;padding:2rem 1.8rem 1.6rem;box-shadow:0 30px 80px -20px rgba(0,0,0,.5);animation:pop .35s cubic-bezier(.2,.8,.2,1) both}
+.mbox::before{content:"";position:absolute;inset:0 0 auto;height:5px;border-radius:24px 24px 0 0;background:linear-gradient(90deg,var(--am),var(--bl))}
+.mg{color:var(--am);font-weight:700;font-size:.85rem;margin:0 0 .3rem}
+#mt{font-size:2rem;margin-bottom:.8rem}
+#md{margin:0 0 1.3rem;font-size:1.08rem}
+#mrl{font-size:.88rem;margin:0 0 .5rem}
+.x{position:absolute;top:.9rem;inset-inline-end:.9rem;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--ln);background:none;color:var(--tx);font-size:1.3rem;line-height:1;cursor:pointer}
+.x:hover{border-color:var(--am)}
+[dir=rtl] *{letter-spacing:0!important}
+[dir=rtl] body,[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3,[dir=rtl] .logo,[dir=rtl] .motto,[dir=rtl] .big,[dir=rtl] button,[dir=rtl] input{font-family:Cairo,"Hanken Grotesk",system-ui,sans-serif}
+[dir=rtl] h1{font-size:clamp(2.8rem,8vw,6rem);line-height:1.3}
+[dir=rtl] .tl>div{padding:0 1.4rem 1.6rem 0;border-left:0;border-right:2px solid var(--ln)}
+[dir=rtl] .tl>div::before{left:auto;right:-7px}
+[dir=rtl] .big{direction:ltr;text-align:right}
+[dir=rtl] .cl a{direction:ltr;display:inline-block}
+@media(max-width:860px){
+#menu{display:grid}
+header nav{position:absolute;top:100%;inset-inline:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--ln);padding:.4rem 1.25rem;display:none}
+header nav.open{display:flex}
+header nav a{padding:.85rem 0;font-size:1.05rem;border-top:1px solid var(--ln)}
+header nav a:first-child{border-top:0}
+}
+</style>
+</head>
+<body>
+<div class="spot" aria-hidden="true"></div>
+<header>
+<div class="wrap">
+<a class="logo" href="#top" aria-label="Mahmoud Sayed , back to top">Mahmoud Sayed</a>
+<nav aria-label="Main">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#lab">Playground</a><a href="#work">Experience</a><a class="keep" href="#contact">Contact</a>
+</nav>
+<button id="lang" type="button" aria-label="Switch language">العربية</button>
+<button id="theme" type="button" aria-label="Switch between light and dark theme">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+<button id="menu" type="button" aria-label="Menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+</header>
+<main id="top">
+<section class="wrap hero" aria-labelledby="name">
+<div>
+<h1 id="name" aria-label="Mahmoud Sayed "><span class="l" aria-hidden="true">Mahmoud</span><span class="l" aria-hidden="true">Sayed</span></h1>
+<p class="lead">Computer Science and AI student at Capital University, looking for a software engineering internship.</p>
+<p class="motto">Better code. Better tomorrow.</p>
+<div class="cta">
+<a class="btn fill" href="mailto:mm07anaf9@gmail.com">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/mahmoud-sayed" target="_blank" rel="noopener">Open LinkedIn</a>
+</div>
+</div>
+<div class="stage">
+<div class="halo"></div>
+<div class="ph"><img src="profile.png" width="560" height="560" alt="Portrait of Mahmoud Sayed at his desk, with code on a laptop behind him"></div>
+<div class="orbit" aria-hidden="true">
+<div class="slot" style="--a:0deg"><span class="chip tag" style="--a:0deg">C</span></div>
+<div class="slot" style="--a:60deg"><span class="chip tag" style="--a:60deg">C++</span></div>
+<div class="slot" style="--a:120deg"><span class="chip tag" style="--a:120deg">Java</span></div>
+<div class="slot" style="--a:180deg"><span class="chip tag" style="--a:180deg">Python</span></div>
+<div class="slot" style="--a:240deg"><span class="chip tag" style="--a:240deg">JavaScript</span></div>
+<div class="slot" style="--a:300deg"><span class="chip tag" style="--a:300deg">SQL</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="about">
+<div class="wrap">
+<h2>About me</h2>
+<div>
+<p>I’m a second-year Computer Science and Artificial Intelligence student with a solid foundation in C, C++, Java, Python and JavaScript. I enjoy turning core ideas, like data structures, algorithms and databases, into working software.</p>
+<p class="mu">I learn fast, stay disciplined under pressure and put the team first. My university group projects and programming competitions are where I practise all three.</p>
+<dl>
+<dt>Studying</dt><dd>Computer Science and Artificial Intelligence</dd>
+<dt>University</dt><dd>Faculty of Computers and Artificial Intelligence, Capital University</dd>
+<dt>Graduating</dt><dd>2029</dd>
+<dt>Based in</dt><dd>Giza, Egypt</dd>
+<dt>Looking for</dt><dd>A software engineering internship</dd>
+</dl>
+</div>
+</div>
+</section>
+
+<section class="sec" id="skills">
+<div class="wrap">
+<h2>Skills</h2>
+<div class="rows">
+<div><h3>Languages</h3><div class="tags"><button type="button" class="tag sk">C</button><button type="button" class="tag sk">C++</button><button type="button" class="tag sk">Java</button><button type="button" class="tag sk">Python</button><button type="button" class="tag sk">JavaScript</button></div></div>
+<div><h3>OOP in Java</h3><div class="tags"><button type="button" class="tag sk">Classes and objects</button><button type="button" class="tag sk">Inheritance</button><button type="button" class="tag sk">Polymorphism</button><button type="button" class="tag sk">Encapsulation</button><button type="button" class="tag sk">Abstraction</button></div></div>
+<div><h3>Data structures</h3><div class="tags"><button type="button" class="tag sk">Arrays</button><button type="button" class="tag sk">Linked lists</button><button type="button" class="tag sk">Stacks</button><button type="button" class="tag sk">Queues</button><button type="button" class="tag sk">Trees</button><button type="button" class="tag sk">Hash tables</button></div></div>
+<div><h3>Databases</h3><div class="tags"><button type="button" class="tag sk">Database fundamentals</button><button type="button" class="tag sk">SQL</button></div></div>
+<div><h3>Web and networks</h3><div class="tags"><button type="button" class="tag sk">HTML</button><button type="button" class="tag sk">CSS</button><button type="button" class="tag sk">Networking fundamentals</button></div></div>
+<div><h3>Working style</h3><div class="tags"><button type="button" class="tag sk">Problem solving</button><button type="button" class="tag sk">Algorithmic thinking</button><button type="button" class="tag sk">Teamwork</button><button type="button" class="tag sk">Communication</button><button type="button" class="tag sk">Time management</button></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="lab">
+<div class="wrap">
+<div>
+<h2>Data structures, hands-on</h2>
+<p class="mu" style="margin-top:1rem">I’ve implemented linked lists, stacks, queues, trees and hash tables in C. Here’s a stack you can play with.</p>
+</div>
+<div class="lab">
+<form id="f">
+<label for="v" class="mu">Value to push</label>
+<input id="v" maxlength="10" autocomplete="off" placeholder="e.g. 42 or hello">
+<div class="cta">
+<button class="btn fill sm" type="submit">Push</button>
+<button class="btn sm" type="button" id="pop">Pop</button>
+<button class="btn sm" type="button" id="clr">Clear</button>
+</div>
+<p id="msg" role="status" aria-live="polite">The stack holds up to 6 items.</p>
+</form>
+<div>
+<div id="stack" aria-label="Stack contents, top item first"><div class="empty">The stack is empty. Type a value and push it.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="work">
+<div class="wrap">
+<h2>Experience and activities</h2>
+<div class="tl">
+<div><h3>University group projects</h3><p>Designed and delivered team software projects, applying OOP, data structures and algorithms to shared deliverables.</p></div>
+<div><h3>Programming competitions</h3><p>Competed in timed contests that sharpen algorithmic thinking and problem solving under pressure.</p></div>
+<div><h3>Self-directed learning</h3><p>Building practical, job-ready skills through online courses and hands-on practice.</p></div>
+<div><h3>Professional development</h3><p>Completed online courses in English proficiency and personal development.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="edu">
+<div class="wrap">
+<h2>Education and languages</h2>
+<div>
+<h3 style="font-size:1.4rem">B.Sc. Computer Science and Artificial Intelligence</h3>
+<p class="mu" style="margin-top:.4rem">Faculty of Computers and Artificial Intelligence, Capital University, Cairo, Egypt. Expected 2029.</p>
+<div style="margin-top:2.2rem;max-width:520px">
+<div class="lg"><span>Arabic</span><span class="mu">Native</span></div>
+<div class="bar" style="--w:100%"><i></i></div>
+<div class="lg"><span>English</span><span class="mu">B2, upper intermediate</span></div>
+<div class="bar" style="--w:70%"><i></i></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="contact">
+<div class="wrap">
+<h2>Let’s talk</h2>
+<div>
+<p class="mu">I’m open to software engineering internships. The fastest way to reach me is email.</p>
+<a class="big" href="mailto:mm07anaf9@gmail.com">mm07anaf9@gmail.com</a>
+<div class="cl">
+<a href="tel:+201279561131">+20 127 956 1131</a>
+<a href="https://www.linkedin.com/in/mahmoud-sayed" target="_blank" rel="noopener">linkedin.com/in/mahmoud-sayed</a>
+<span class="mu">Giza, Egypt</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 Mahmoud Sayed</span><span></span></div></footer>
+
+<div class="mdl" id="mdl" hidden role="dialog" aria-modal="true" aria-labelledby="mt"><div class="mbox"><button class="x" id="mx" type="button" aria-label="Close">&times;</button><p class="mg" id="mg"></p><h3 id="mt"></h3><p id="md"></p><p class="mu" id="mrl"></p><div class="tags" id="mr"></div></div></div>
+<script>
+(function(){
+var R=document.documentElement,L="en",$=function(i){return document.getElementById(i)};
+try{L=localStorage.getItem("lang")==="ar"?"ar":"en"}catch(e){}
+var U={en:{typeFirst:"Type a value first, then press Push.",over:function(m){return"Stack overflow: the stack is full at "+m+" items. Pop one first."},pushed:function(v,n,m){return"push("+v+"). "+n+" of "+m+" used."},under:"Stack underflow: nothing to pop. Push a value first.",popped:function(v,t){return"pop() returned "+v+". "+(t!=null?"New top is "+t+".":"The stack is now empty.")},cleared:"Stack cleared.",top:"top",ph:"e.g. 42 or hello",also:"Also in this group"},
+ar:{typeFirst:"اكتب قيمة الأول وبعدين اضغط أضف.",over:function(m){return"الـ Stack مليانة ("+m+" عناصر). احذف عنصر الأول."},pushed:function(v,n,m){return"push("+v+"). مستخدم "+n+" من "+m+"."},under:"الـ Stack فاضية، مفيش حاجة تتحذف. أضف قيمة الأول.",popped:function(v,t){return"pop() رجّعت "+v+". "+(t!=null?"أعلى عنصر دلوقتي "+t+".":"الـ Stack بقت فاضية.")},cleared:"تم مسح الـ Stack.",top:"التوب",ph:"مثلاً 42 أو hello",also:"ضمن نفس المجموعة"}};
+window.M=function(k){var a=[].slice.call(arguments,1),x=U[L][k];return typeof x==="function"?x.apply(null,a):x};
+var A={"Mahmoud Sayed":"محمود سيد","About":"نبذة","Skills":"المهارات","Playground":"التجربة","Experience":"الخبرات","Contact":"تواصل",
+"Email me":"ابعتلي إيميل","Open LinkedIn":"افتح لينكدإن",
+"Computer Science and AI student*":"طالب علوم حاسب وذكاء اصطناعي في جامعة العاصمة، وبدوّر على تدريب في السوفتوير.",
+"Better code. Better tomorrow.":"كود أفضل. غد أفضل.",
+"About me":"نبذة عني",
+"I'm a second-year*":"أنا طالب في تانية كلية حاسبات وذكاء اصطناعي، وعندي أساس قوي في C وC++ وJava وPython وJavaScript. بحب أحوّل الأفكار الأساسية زي هياكل البيانات والخوارزميات وقواعد البيانات لبرامج شغّالة.",
+"I learn fast*":"بتعلّم بسرعة، وبفضل منضبط تحت الضغط، وبحط الفريق أولاً. مشاريع الجامعة ومسابقات البرمجة هي المكان اللي بتدرّب فيه على الثلاثة.",
+"Studying":"بدرس","University":"الجامعة","Graduating":"التخرج","Based in":"مقيم في","Looking for":"بدوّر على",
+"Computer Science and Artificial Intelligence":"علوم الحاسب والذكاء الاصطناعي","Faculty of Computers and AI, Capital University":"كلية الحاسبات والذكاء الاصطناعي، جامعة العاصمة","Giza, Egypt":"الجيزة، مصر","A software engineering internship":"تدريب في هندسة البرمجيات",
+"Languages":"اللغات","OOP in Java":"البرمجة الكائنية بـ Java","Data structures":"هياكل البيانات","Databases":"قواعد البيانات","Web and networks":"الويب والشبكات","Working style":"أسلوب الشغل",
+"Database fundamentals":"أساسيات قواعد البيانات","Networking fundamentals":"أساسيات الشبكات","Problem solving":"حل المشكلات","Algorithmic thinking":"التفكير الخوارزمي","Teamwork":"العمل الجماعي","Communication":"التواصل","Time management":"إدارة الوقت",
+"Data structures, hands-on":"هياكل البيانات بالتطبيق",
+"I've implemented*":"نفّذت القوائم المترابطة والـ Stacks والـ Queues والأشجار وجداول الـ Hash بلغة C. جرّب الـ Stack دي بنفسك.",
+"Value to push":"القيمة اللي هتضيفها","Push":"أضف","Pop":"احذف","Clear":"امسح",
+"The stack holds up to 6 items.":"الـ Stack بتشيل لحد 6 عناصر.","The stack is empty. Type a value and push it.":"الـ Stack فاضية. اكتب قيمة واضغط أضف.",
+"Experience and activities":"الخبرات والأنشطة",
+"University group projects":"مشاريع الجامعة الجماعية","Designed and delivered*":"صمّمت وسلّمت مشاريع برمجية جماعية بتطبيق OOP وهياكل البيانات والخوارزميات على المخرجات المشتركة.",
+"Programming competitions":"مسابقات البرمجة","Competed in timed*":"شاركت في مسابقات بوقت محدد بتقوّي التفكير الخوارزمي وحل المشكلات تحت الضغط.",
+"Self-directed learning":"التعلّم الذاتي","Building practical*":"بنّي مهارات عملية جاهزة لسوق الشغل من كورسات أونلاين وتطبيق عملي.",
+"Professional development":"التطوير المهني","Completed online courses*":"خلّصت كورسات أونلاين في اللغة الإنجليزية والتطوير الشخصي.",
+"Education and languages":"التعليم واللغات","B.Sc. Computer Science and Artificial Intelligence":"بكالوريوس علوم الحاسب والذكاء الاصطناعي",
+"Faculty of Computers and Artificial Intelligence, Capital*":"كلية الحاسبات والذكاء الاصطناعي، جامعة العاصمة، القاهرة. التخرج المتوقع 2029.",
+"Arabic":"العربية","Native":"لغة أم","English":"الإنجليزية","B2, upper intermediate":"B2، فوق المتوسط",
+"Let's talk":"نتكلم؟","I'm open to software*":"مفتوح لفرص التدريب في هندسة البرمجيات، وأسرع طريقة للتواصل معايا هي الإيميل.",
+"© 2026 Mahmoud Sayed":"© 2026 محمود سيد"};
+var SK={"C":["Low-level language where I built linked lists, stacks, queues, trees and hash tables.","لغة منخفضة المستوى نفّذت بيها القوائم المترابطة والـ Stacks والـ Queues والأشجار وجداول الـ Hash."],
+"C++":["C with classes and the STL: fast, expressive and great for algorithms.","لغة C مع الكلاسات والـ STL: سريعة ومعبّرة ومناسبة للخوارزميات."],
+"Java":["Object-oriented language I use to practise OOP design.","لغة كائنية التوجه بستخدمها في تطبيق تصميم OOP."],
+"Python":["Readable, versatile language for scripting and quick prototypes.","لغة سهلة القراءة ومرنة للسكريبتات والنماذج السريعة."],
+"JavaScript":["The language of the web: it makes pages interactive.","لغة الويب: بتخلّي الصفحات تفاعلية."],
+"Classes and objects":["A class is a blueprint; an object is an instance built from it.","الكلاس هو القالب، والأوبجكت نسخة متصنّعة منه."],
+"Inheritance":["A class reuses and extends the fields and methods of another.","كلاس بيعيد استخدام وتوسيع خصائص ودوال كلاس تاني."],
+"Polymorphism":["One interface, many behaviours: the same call acts differently per type.","واجهة واحدة وسلوكيات كتير: نفس النداء بيتصرف مختلف حسب النوع."],
+"Encapsulation":["Keeping data private and exposing it only through methods.","إخفاء البيانات وإتاحتها عن طريق الدوال بس."],
+"Abstraction":["Hiding complexity behind a simple interface.","إخفاء التعقيد ورا واجهة بسيطة."],
+"Arrays":["Contiguous memory with O(1) access by index.","ذاكرة متصلة والوصول بالـ index في O(1)."],
+"Linked lists":["Nodes linked by pointers; cheap inserts and deletes.","عُقد مربوطة بمؤشرات، والإضافة والحذف فيها رخيصين."],
+"Stacks":["Last in, first out (LIFO). Try the playground below.","آخر داخل أول خارج (LIFO). جرّبها في قسم التجربة."],
+"Queues":["First in, first out (FIFO), like a line of people.","أول داخل أول خارج (FIFO) زي طابور الناس."],
+"Trees":["Hierarchical nodes; the base of search trees and heaps.","عُقد هرمية، أساس أشجار البحث والـ Heaps."],
+"Hash tables":["Key-to-value lookup in near O(1) using a hash function.","بحث من المفتاح للقيمة في O(1) تقريباً بدالة Hash."],
+"Database fundamentals":["Tables, keys and relationships that keep data organised.","جداول ومفاتيح وعلاقات بتنظّم البيانات."],
+"SQL":["The language for querying and managing relational data.","لغة الاستعلام وإدارة البيانات العلائقية."],
+"HTML":["The structure of every web page.","هيكل أي صفحة ويب."],
+"CSS":["Styling and layout that make pages look good on any screen.","التنسيق والتخطيط اللي بيخلّي الصفحات حلوة على أي شاشة."],
+"Networking fundamentals":["How devices communicate: IP, protocols and requests and responses.","إزاي الأجهزة بتتواصل: IP والبروتوكولات والـ requests والـ responses."],
+"Problem solving":["Breaking a hard problem into small, solvable steps.","تقسيم المشكلة الصعبة لخطوات صغيرة قابلة للحل."],
+"Algorithmic thinking":["Choosing an efficient step-by-step approach and checking its cost.","اختيار طريقة فعّالة خطوة بخطوة وتقييم تكلفتها."],
+"Teamwork":["Sharing work and ideas, as in my university group projects.","مشاركة الشغل والأفكار، زي مشاريع الجامعة الجماعية."],
+"Communication":["Explaining ideas clearly and listening well.","شرح الأفكار بوضوح والاستماع كويس."],
+"Time management":["Prioritising and meeting deadlines under pressure.","ترتيب الأولويات والالتزام بالمواعيد تحت الضغط."]};
+function tr(x){var n=x.replace(/’/g,"'").trim();for(var k in A){if(k.slice(-1)==="*"?n.indexOf(k.slice(0,-1))===0:n===k)return A[k]}return x}
+var els=[].filter.call(document.querySelectorAll(".logo,nav a,.cta a,button.btn,.lead,.motto,h2,.rows h3,.tl h3,.tl p,.sec p,h3[style],dt,dd,.lg span,label,.empty,footer span,.cl span,.sk"),function(e){return!e.children.length&&e.textContent.trim()});
+els.forEach(function(e){e.dataset.en=e.textContent});
+function setName(){var P=L==="ar"?["محمود","سيد"]:["Mahmoud","Sayed"],i=0;
+document.querySelectorAll("h1 .l").forEach(function(l,j){l.textContent="";var add=function(t){var c=document.createElement("span");c.className="c";c.style.setProperty("--i",L==="ar"?j:i++);c.textContent=t;l.appendChild(c)};if(L==="ar")add(P[j]);else P[j].split("").forEach(function(ch){add(ch===" "?"\u00A0":ch)})});
+$("name").setAttribute("aria-label",L==="ar"?"محمود سيد":"Mahmoud Sayed")}
+var cur=null;
+function apply(){R.lang=L;R.dir=L==="ar"?"rtl":"ltr";
+els.forEach(function(e){e.textContent=L==="ar"?tr(e.dataset.en):e.dataset.en});
+$("v").placeholder=M("ph");$("lang").textContent=L==="ar"?"English":"العربية";
+document.title=L==="ar"?"محمود سيد – طالب علوم حاسب وذكاء اصطناعي":"Mahmoud Sayed – Computer Science & AI student";
+setName();document.querySelectorAll("#stack .it.top small").forEach(function(x){x.textContent=M("top")});
+if(!$("mdl").hidden&&cur)openSk(cur)}
+function openSk(b){cur=b;var row=b.closest(".rows>div"),d=SK[b.dataset.en]||["",""];
+$("mg").textContent=row.querySelector("h3").textContent;$("mt").textContent=b.textContent;$("md").textContent=L==="ar"?d[1]:d[0];$("mrl").textContent=M("also");
+var mr=$("mr");mr.innerHTML="";
+row.querySelectorAll(".sk").forEach(function(o){if(o===b)return;var c=document.createElement("button");c.type="button";c.className="tag sk";c.textContent=o.textContent;c.onclick=function(){openSk(o)};mr.appendChild(c)});
+$("mdl").hidden=false;document.body.style.overflow="hidden";$("mx").focus()}
+function closeSk(){$("mdl").hidden=true;document.body.style.overflow="";if(cur)cur.focus()}
+document.querySelectorAll("#skills .sk").forEach(function(b){b.addEventListener("click",function(){openSk(b)})});
+$("mx").onclick=closeSk;$("mdl").addEventListener("click",function(e){if(e.target===$("mdl"))closeSk()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!$("mdl").hidden)closeSk()});
+$("lang").onclick=function(){L=L==="ar"?"en":"ar";try{localStorage.setItem("lang",L)}catch(e){}apply()};
+var nv=document.querySelector("header nav");
+$("menu").onclick=function(){var o=nv.classList.toggle("open");this.setAttribute("aria-expanded",o)};
+nv.addEventListener("click",function(e){if(e.target.closest("a")){nv.classList.remove("open");$("menu").setAttribute("aria-expanded","false")}});
+var links=[].slice.call(nv.querySelectorAll("a"));
+if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});document.querySelectorAll("main section[id]").forEach(function(x){so.observe(x)})}
+apply();
+})();
+</script>
+<script>
+(function(){
+var R=document.documentElement;
+// Hero name: split into letters for the one load animation
+// Lamp-style spotlight follows the pointer
+var sp=document.querySelector(".spot"),raf=0,mx=0,my=0;
+window.addEventListener("pointermove",function(e){mx=e.clientX;my=e.clientY;if(!raf)raf=requestAnimationFrame(function(){sp.style.setProperty("--mx",mx+"px");sp.style.setProperty("--my",my+"px");raf=0})},{passive:true});
+// Theme toggle
+try{var sv=localStorage.getItem("theme");if(sv)R.dataset.theme=sv}catch(e){}
+document.getElementById("theme").addEventListener("click",function(){var dark=R.dataset.theme?R.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;var n=dark?"light":"dark";R.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}});
+// Language bars
+var bars=document.querySelectorAll(".bar");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.6});bars.forEach(function(b){io.observe(b)})}else{bars.forEach(function(b){b.classList.add("on")})}
+// Stack playground
+var st=[],box=document.getElementById("stack"),msg=document.getElementById("msg"),inp=document.getElementById("v"),MAX=6;
+function draw(){box.querySelectorAll(".it:not(.out)").forEach(function(n){n.remove()});var e=box.querySelector(".empty");if(e)e.style.display=st.length?"none":"grid";st.forEach(function(v,k){var d=document.createElement("div");d.className="it"+(k===st.length-1?" top":"");d.style.animation="none";var a=document.createElement("span");a.textContent=v;var b=document.createElement("small");b.textContent=k===st.length-1?M("top"):"";d.appendChild(a);d.appendChild(b);box.appendChild(d)})}
+function add(v){var d=document.createElement("div");d.className="it top";var a=document.createElement("span");a.textContent=v;var b=document.createElement("small");b.textContent=M("top");d.appendChild(a);d.appendChild(b);box.querySelectorAll(".it.top").forEach(function(n){n.classList.remove("top");n.querySelector("small").textContent=""});box.appendChild(d);var e=box.querySelector(".empty");if(e)e.style.display="none"}
+document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();var v=inp.value.trim();if(!v){msg.textContent=M("typeFirst");inp.focus();return}if(st.length>=MAX){msg.textContent=M("over",MAX);return}st.push(v);add(v);msg.textContent=M("pushed",v,st.length,MAX);inp.value="";inp.focus()});
+document.getElementById("pop").addEventListener("click",function(){if(!st.length){msg.textContent=M("under");return}var v=st.pop();var t=box.querySelectorAll(".it:not(.out)");var last=t[t.length-1];last.classList.add("out");setTimeout(function(){last.remove();var n=box.querySelectorAll(".it:not(.out)");if(n.length){var nt=n[n.length-1];nt.classList.add("top");nt.querySelector("small").textContent=M("top")}},280);var e=box.querySelector(".empty");if(!st.length&&e)e.style.display="grid";msg.textContent=M("popped",v,st.length?st[st.length-1]:null)});
+document.getElementById("clr").addEventListener("click",function(){st=[];draw();msg.textContent=M("cleared")});
+})();
+</script>
+</body>
+</html>
